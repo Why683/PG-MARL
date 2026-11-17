@@ -1,0 +1,93 @@
+{
+  "protocol": "Comment-10 frozen-V8 source-only recurrent-gradient and runtime audit",
+  "base_model": "models_v8.TASN / accepted V8 c1_safe_cap0p1 configuration",
+  "v8_configuration": {
+    "architecture": "tasn",
+    "student_physics_residual": true,
+    "student_physics_residual_sequence": true,
+    "student_rv_band_attention": true,
+    "student_rv_spectral_safe_residual": true,
+    "rv_spectral_max_scale": 0.1,
+    "rv_spectral_drop_prob": 0.25
+  },
+  "domain_d_access": false,
+  "registered_domains": [
+    "Domain_A_Trajectory",
+    "Domain_B_Trajectory",
+    "Domain_C_Trajectory"
+  ],
+  "native_recurrent_steps": 167,
+  "stress_test_steps": 200,
+  "audit_seed": 20260824,
+  "gradient_definition": "At matched random initialization, median across graph nodes of the L2 norm of the fixed-source-validation cross-entropy gradient with respect to s_t. Panel (a) uses the unmodified native synchronized sequence; panel (b) interpolates the same source tensor to 200 steps as a nominal-rate stress test. The figure shows across-seed median and interquartile range.",
+  "divergence_handling": "A variant that raises NaN/Inf is not repaired and is not counted as a completed model. A last finite state is used for runtime only when one exists; otherwise runtime is architecture-only at matched initialization. Gradient propagation is isolated at matched initialization for all three variants.",
+  "latency_definition": "batch-1 server-GPU model forward from prepared tensors; 20 warm-ups and 100 timed calls. Completed variants use their source-selected checkpoint; a variant with no finite checkpoint uses matched initialization and is explicitly identified by its training status.",
+  "by_normalization": {
+    "none": {
+      "completed_checkpoint_count": 5,
+      "diverged_run_count": 0,
+      "elapsed_seconds_all_runs_mean": 227.01549284886568,
+      "elapsed_seconds_all_runs_sample_sd": 0.8390743254773765,
+      "completed_training_seconds_mean": 227.01549284886568,
+      "completed_training_seconds_sample_sd": 0.8390743254773765,
+      "divergence_elapsed_seconds_mean": null,
+      "latency_ms_mean": 135.2987689357251,
+      "latency_ms_sample_sd": 2.2020557646126755,
+      "parameter_count_values": [
+        501480
+      ],
+      "native_finite_gradient_min": 0.0,
+      "native_finite_gradient_median": 5.560457797272324e-18,
+      "native_finite_gradient_max": 0.006263254210352898,
+      "native_nonfinite_fraction": 0.0,
+      "stress_finite_gradient_min": 0.0,
+      "stress_finite_gradient_median": 1.1267786045640936e-20,
+      "stress_finite_gradient_max": 0.006267891265451908,
+      "stress_nonfinite_fraction": 0.0
+    },
+    "layernorm": {
+      "completed_checkpoint_count": 5,
+      "diverged_run_count": 0,
+      "elapsed_seconds_all_runs_mean": 230.00614726413042,
+      "elapsed_seconds_all_runs_sample_sd": 1.2738406625012617,
+      "completed_training_seconds_mean": 230.00614726413042,
+      "completed_training_seconds_sample_sd": 1.2738406625012617,
+      "divergence_elapsed_seconds_mean": null,
+      "latency_ms_mean": 145.8785498533398,
+      "latency_ms_sample_sd": 1.0210137696935273,
+      "parameter_count_values": [
+        501736
+      ],
+      "native_finite_gradient_min": 9.02844203665154e-06,
+      "native_finite_gradient_median": 0.00019567590788938105,
+      "native_finite_gradient_max": 0.0056206113658845425,
+      "native_nonfinite_fraction": 0.0,
+      "stress_finite_gradient_min": 3.0108469672995852e-06,
+      "stress_finite_gradient_median": 0.00010541087613091804,
+      "stress_finite_gradient_max": 0.005524628795683384,
+      "stress_nonfinite_fraction": 0.0
+    },
+    "batchnorm": {
+      "completed_checkpoint_count": 0,
+      "diverged_run_count": 5,
+      "elapsed_seconds_all_runs_mean": 39.04149378929287,
+      "elapsed_seconds_all_runs_sample_sd": 22.28296950044788,
+      "completed_training_seconds_mean": null,
+      "completed_training_seconds_sample_sd": null,
+      "divergence_elapsed_seconds_mean": 39.04149378929287,
+      "latency_ms_mean": 147.03341306373477,
+      "latency_ms_sample_sd": 2.7049731264980714,
+      "parameter_count_values": [
+        501736
+      ],
+      "native_finite_gradient_min": 0.0002041453553829342,
+      "native_finite_gradient_median": 0.004511848092079163,
+      "native_finite_gradient_max": 46.70199966430664,
+      "native_nonfinite_fraction": 0.0,
+      "stress_finite_gradient_min": 0.00013422513438854367,
+      "stress_finite_gradient_median": 0.00429052603431046,
+      "stress_finite_gradient_max": 234.588623046875,
+      "stress_nonfinite_fraction": 0.0
+    }
+  }
+}

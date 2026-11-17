@@ -1,0 +1,2464 @@
+{
+  "protocol": "locked V8 guarded five-seed post-selection Domain D final evaluation",
+  "source_only_plan": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/source_only_v8_nested_lodo_protocol.json",
+  "source_only_plan_sha256": "1f88d3f694547f68d74a8a459733ce8068547845ee7c29a8e7bb797ec8a0e9d6",
+  "source_only_acceptance_report": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/protocol_outputs/v8_nested_lodo/nested_lodo_results_v1.json",
+  "source_only_acceptance_report_sha256": "75b64c495948adfcc50a8691d4af7ac8a7be68b4bea41a0f0ba1cec3647a52e8",
+  "source_only_candidate": "c1_safe_cap0p1",
+  "evaluator_sha256": "a42d99b7b359faf9370da6af494e3560d41bb15b73f41dfa4301ea50e6970a93",
+  "fixed_seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "seed_selection_on_D": false,
+  "reporting_rule": "report mean and sample standard deviation across all fixed seeds",
+  "warning": "Domain D metrics must not be used for further model or hyperparameter selection",
+  "scope_note": "All V8 architecture, candidate, checkpoint and seed decisions were completed using A/B/C before this executable registered D. The resulting D metrics are final outcomes and cannot be used for further V8 tuning or selection.",
+  "domain_d_access_during_training": false,
+  "evaluation_registry": [
+    "Domain_D_Trajectory"
+  ],
+  "evaluation_split": "test",
+  "evaluation_windows_are_fixed_and_non_overlapping": true,
+  "target_trials": 19,
+  "target_windows": 152,
+  "target_class_counts": {
+    "Wear": 32,
+    "Crack": 32,
+    "Broken": 24,
+    "Normal": 32,
+    "Pitting": 32
+  },
+  "physics_prior_version": "v3",
+  "per_seed": {
+    "42": {
+      "checkpoint": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/checkpoints/tasn_erm_ABC_seed42_ep50_spe10_priorv3_v8_res1_resseq1_ordspec0_rvband1_rvsafe1_cap0p1_drop0p25_lr0p001_init0_groupdro0p01_ra1.pth",
+      "checkpoint_sha256": "41a57b18109e6474026470706cee05b5f1c1b5aa9b3d5eb347315fd8616d0e93",
+      "best_source_validation_epoch": 20,
+      "source_test": {
+        "accuracy": 0.9,
+        "macro_precision": 0.9084656084656085,
+        "macro_recall": 0.9,
+        "macro_f1": 0.8988474604244316,
+        "num_windows": 120,
+        "per_class": {
+          "Wear": {
+            "precision": 0.8518518518518519,
+            "recall": 0.9583333333333334,
+            "f1": 0.9019607843137256,
+            "support": 24
+          },
+          "Crack": {
+            "precision": 1.0,
+            "recall": 0.9583333333333334,
+            "f1": 0.9787234042553191,
+            "support": 24
+          },
+          "Broken": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 24
+          },
+          "Normal": {
+            "precision": 0.8571428571428571,
+            "recall": 1.0,
+            "f1": 0.923076923076923,
+            "support": 24
+          },
+          "Pitting": {
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1": 0.8333333333333334,
+            "support": 24
+          }
+        }
+      },
+      "source_test_by_domain": {
+        "Domain_A_Trajectory": {
+          "accuracy": 0.825,
+          "macro_precision": 0.8488888888888889,
+          "macro_recall": 0.825,
+          "macro_f1": 0.8241729512317747,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.7777777777777778,
+              "recall": 0.875,
+              "f1": 0.823529411764706,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.6666666666666666,
+              "recall": 0.75,
+              "f1": 0.7058823529411765,
+              "support": 8
+            }
+          }
+        },
+        "Domain_B_Trajectory": {
+          "accuracy": 0.925,
+          "macro_precision": 0.9377777777777776,
+          "macro_recall": 0.925,
+          "macro_f1": 0.9198592257415786,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            }
+          }
+        },
+        "Domain_C_Trajectory": {
+          "accuracy": 0.95,
+          "macro_precision": 0.96,
+          "macro_recall": 0.95,
+          "macro_f1": 0.9492063492063492,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 0.75,
+              "f1": 0.8571428571428571,
+              "support": 8
+            }
+          }
+        }
+      },
+      "main_head": {
+        "n": 152,
+        "accuracy": 0.46710526315789475,
+        "macro_precision": 0.582579185520362,
+        "macro_recall": 0.48125,
+        "macro_f1": 0.46686147186147187,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.47058823529411764,
+            "recall": 0.5,
+            "f1": 0.48484848484848486,
+            "support": 32,
+            "correct": 16
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 1.0,
+            "recall": 0.71875,
+            "f1": 0.8363636363636363,
+            "support": 32,
+            "correct": 23
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.25,
+            "recall": 0.75,
+            "f1": 0.375,
+            "support": 24,
+            "correct": 18
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.6923076923076923,
+            "recall": 0.28125,
+            "f1": 0.4,
+            "support": 32,
+            "correct": 9
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.5,
+            "recall": 0.15625,
+            "f1": 0.23809523809523808,
+            "support": 32,
+            "correct": 5
+          }
+        ],
+        "confusion_matrix": [
+          [
+            16,
+            0,
+            16,
+            0,
+            0
+          ],
+          [
+            0,
+            23,
+            9,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            18,
+            4,
+            0
+          ],
+          [
+            7,
+            0,
+            11,
+            9,
+            5
+          ],
+          [
+            9,
+            0,
+            18,
+            0,
+            5
+          ]
+        ]
+      },
+      "residual_head_diagnostic": {
+        "n": 152,
+        "accuracy": 0.375,
+        "macro_precision": 0.3525299145299145,
+        "macro_recall": 0.37916666666666665,
+        "macro_f1": 0.3350982350982351,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.24,
+            "recall": 0.1875,
+            "f1": 0.21052631578947367,
+            "support": 32,
+            "correct": 6
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.7111111111111111,
+            "recall": 1.0,
+            "f1": 0.8311688311688311,
+            "support": 32,
+            "correct": 32
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.21153846153846154,
+            "recall": 0.4583333333333333,
+            "f1": 0.2894736842105263,
+            "support": 24,
+            "correct": 11
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.4,
+            "recall": 0.125,
+            "f1": 0.19047619047619047,
+            "support": 32,
+            "correct": 4
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.2,
+            "recall": 0.125,
+            "f1": 0.15384615384615385,
+            "support": 32,
+            "correct": 4
+          }
+        ],
+        "confusion_matrix": [
+          [
+            6,
+            4,
+            13,
+            0,
+            9
+          ],
+          [
+            0,
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            2,
+            11,
+            1,
+            4
+          ],
+          [
+            8,
+            3,
+            14,
+            4,
+            3
+          ],
+          [
+            5,
+            4,
+            14,
+            5,
+            4
+          ]
+        ]
+      },
+      "locked_training_config": {
+        "seed": 42,
+        "architecture": "tasn",
+        "epochs": 50,
+        "steps_per_epoch": 10,
+        "batch_size": 60,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "label_smoothing": 0.0,
+        "domain_objective": "groupdro",
+        "groupdro_step_size": 0.01,
+        "vrex_weight": 1.0,
+        "trial_consistency_weight": 0.0,
+        "windows_per_trial": 2,
+        "teacher_checkpoint": null,
+        "student_init_checkpoint": null,
+        "student_physics_residual": true,
+        "student_physics_residual_sequence": true,
+        "student_order_spectrum": false,
+        "student_rv_band_attention": true,
+        "student_rv_spectral_contrast": false,
+        "student_rv_spectral_safe_residual": true,
+        "rv_spectral_max_scale": 0.1,
+        "rv_spectral_drop_prob": 0.25,
+        "residual_aux_weight": 1.0,
+        "residual_selection_weight": 0.1,
+        "distill_weight": 1.0,
+        "relation_weight": 0.0,
+        "distill_temperature": 2.0,
+        "teacher_confidence_threshold": 0.4,
+        "distill_ramp_fraction": 0.2,
+        "prototype_weight": 0.0,
+        "prototype_align_weight": 0.0,
+        "contrastive_weight": 0.0,
+        "motion_decoupling_weight": 0.0,
+        "prototype_temperature": 0.1,
+        "contrastive_temperature": 0.1,
+        "dg_ramp_fraction": 0.2,
+        "validate_every": 5,
+        "patience_validations": 0,
+        "held_out_domain": null,
+        "source_pool": [
+          "A",
+          "B",
+          "C"
+        ],
+        "physics_config": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/physics_config.json"
+      },
+      "student_parameter_count": 501480
+    },
+    "52": {
+      "checkpoint": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/checkpoints/tasn_erm_ABC_seed52_ep50_spe10_priorv3_v8_res1_resseq1_ordspec0_rvband1_rvsafe1_cap0p1_drop0p25_lr0p001_init0_groupdro0p01_ra1.pth",
+      "checkpoint_sha256": "69ac1105f6af92406d0593f9dd7587dadd7ab3a794e30586dec6f6ce47dbd528",
+      "best_source_validation_epoch": 25,
+      "source_test": {
+        "accuracy": 0.9416666666666667,
+        "macro_precision": 0.9448757763975155,
+        "macro_recall": 0.9416666666666668,
+        "macro_f1": 0.9412938716130205,
+        "num_windows": 120,
+        "per_class": {
+          "Wear": {
+            "precision": 0.8571428571428571,
+            "recall": 1.0,
+            "f1": 0.923076923076923,
+            "support": 24
+          },
+          "Crack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Broken": {
+            "precision": 0.9523809523809523,
+            "recall": 0.8333333333333334,
+            "f1": 0.888888888888889,
+            "support": 24
+          },
+          "Normal": {
+            "precision": 0.9583333333333334,
+            "recall": 0.9583333333333334,
+            "f1": 0.9583333333333334,
+            "support": 24
+          },
+          "Pitting": {
+            "precision": 0.9565217391304348,
+            "recall": 0.9166666666666666,
+            "f1": 0.9361702127659574,
+            "support": 24
+          }
+        }
+      },
+      "source_test_by_domain": {
+        "Domain_A_Trajectory": {
+          "accuracy": 0.9,
+          "macro_precision": 0.9127777777777777,
+          "macro_recall": 0.9,
+          "macro_f1": 0.8948592257415786,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.875,
+              "recall": 0.875,
+              "f1": 0.875,
+              "support": 8
+            }
+          }
+        },
+        "Domain_B_Trajectory": {
+          "accuracy": 0.975,
+          "macro_precision": 0.9777777777777779,
+          "macro_recall": 0.975,
+          "macro_f1": 0.9749019607843138,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          }
+        },
+        "Domain_C_Trajectory": {
+          "accuracy": 0.95,
+          "macro_precision": 0.9555555555555555,
+          "macro_recall": 0.95,
+          "macro_f1": 0.9498039215686275,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            }
+          }
+        }
+      },
+      "main_head": {
+        "n": 152,
+        "accuracy": 0.4407894736842105,
+        "macro_precision": 0.5373015873015874,
+        "macro_recall": 0.4625,
+        "macro_f1": 0.43212536705503457,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.3055555555555556,
+            "recall": 0.34375,
+            "f1": 0.3235294117647059,
+            "support": 32,
+            "correct": 11
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 1.0,
+            "recall": 0.6875,
+            "f1": 0.8148148148148148,
+            "support": 32,
+            "correct": 22
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.2916666666666667,
+            "recall": 0.875,
+            "f1": 0.43750000000000006,
+            "support": 24,
+            "correct": 21
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.375,
+            "recall": 0.09375,
+            "f1": 0.15,
+            "support": 32,
+            "correct": 3
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.7142857142857143,
+            "recall": 0.3125,
+            "f1": 0.43478260869565216,
+            "support": 32,
+            "correct": 10
+          }
+        ],
+        "confusion_matrix": [
+          [
+            11,
+            0,
+            20,
+            0,
+            1
+          ],
+          [
+            3,
+            22,
+            7,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            21,
+            3,
+            0
+          ],
+          [
+            14,
+            0,
+            12,
+            3,
+            3
+          ],
+          [
+            8,
+            0,
+            12,
+            2,
+            10
+          ]
+        ]
+      },
+      "residual_head_diagnostic": {
+        "n": 152,
+        "accuracy": 0.40131578947368424,
+        "macro_precision": 0.3679600858911204,
+        "macro_recall": 0.40625,
+        "macro_f1": 0.3641380912023967,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.41379310344827586,
+            "recall": 0.375,
+            "f1": 0.3934426229508197,
+            "support": 32,
+            "correct": 12
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.7142857142857143,
+            "recall": 0.9375,
+            "f1": 0.8108108108108109,
+            "support": 32,
+            "correct": 30
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.23076923076923078,
+            "recall": 0.5,
+            "f1": 0.3157894736842105,
+            "support": 24,
+            "correct": 12
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.21428571428571427,
+            "recall": 0.09375,
+            "f1": 0.13043478260869562,
+            "support": 32,
+            "correct": 3
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.26666666666666666,
+            "recall": 0.125,
+            "f1": 0.1702127659574468,
+            "support": 32,
+            "correct": 4
+          }
+        ],
+        "confusion_matrix": [
+          [
+            12,
+            4,
+            12,
+            1,
+            3
+          ],
+          [
+            2,
+            30,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            3,
+            12,
+            5,
+            1
+          ],
+          [
+            8,
+            2,
+            12,
+            3,
+            7
+          ],
+          [
+            4,
+            3,
+            16,
+            5,
+            4
+          ]
+        ]
+      },
+      "locked_training_config": {
+        "seed": 52,
+        "architecture": "tasn",
+        "epochs": 50,
+        "steps_per_epoch": 10,
+        "batch_size": 60,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "label_smoothing": 0.0,
+        "domain_objective": "groupdro",
+        "groupdro_step_size": 0.01,
+        "vrex_weight": 1.0,
+        "trial_consistency_weight": 0.0,
+        "windows_per_trial": 2,
+        "teacher_checkpoint": null,
+        "student_init_checkpoint": null,
+        "student_physics_residual": true,
+        "student_physics_residual_sequence": true,
+        "student_order_spectrum": false,
+        "student_rv_band_attention": true,
+        "student_rv_spectral_contrast": false,
+        "student_rv_spectral_safe_residual": true,
+        "rv_spectral_max_scale": 0.1,
+        "rv_spectral_drop_prob": 0.25,
+        "residual_aux_weight": 1.0,
+        "residual_selection_weight": 0.1,
+        "distill_weight": 1.0,
+        "relation_weight": 0.0,
+        "distill_temperature": 2.0,
+        "teacher_confidence_threshold": 0.4,
+        "distill_ramp_fraction": 0.2,
+        "prototype_weight": 0.0,
+        "prototype_align_weight": 0.0,
+        "contrastive_weight": 0.0,
+        "motion_decoupling_weight": 0.0,
+        "prototype_temperature": 0.1,
+        "contrastive_temperature": 0.1,
+        "dg_ramp_fraction": 0.2,
+        "validate_every": 5,
+        "patience_validations": 0,
+        "held_out_domain": null,
+        "source_pool": [
+          "A",
+          "B",
+          "C"
+        ],
+        "physics_config": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/physics_config.json"
+      },
+      "student_parameter_count": 501480
+    },
+    "62": {
+      "checkpoint": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/checkpoints/tasn_erm_ABC_seed62_ep50_spe10_priorv3_v8_res1_resseq1_ordspec0_rvband1_rvsafe1_cap0p1_drop0p25_lr0p001_init0_groupdro0p01_ra1.pth",
+      "checkpoint_sha256": "b4c994857c33d4190c9b34175378042c83957eeea6e3065bd3cfa0f9d67baa60",
+      "best_source_validation_epoch": 20,
+      "source_test": {
+        "accuracy": 0.9416666666666667,
+        "macro_precision": 0.9429230769230769,
+        "macro_recall": 0.9416666666666667,
+        "macro_f1": 0.9404007421150278,
+        "num_windows": 120,
+        "per_class": {
+          "Wear": {
+            "precision": 0.8846153846153846,
+            "recall": 0.9583333333333334,
+            "f1": 0.9199999999999999,
+            "support": 24
+          },
+          "Crack": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 24
+          },
+          "Broken": {
+            "precision": 0.95,
+            "recall": 0.7916666666666666,
+            "f1": 0.8636363636363635,
+            "support": 24
+          },
+          "Normal": {
+            "precision": 0.96,
+            "recall": 1.0,
+            "f1": 0.9795918367346939,
+            "support": 24
+          },
+          "Pitting": {
+            "precision": 0.92,
+            "recall": 0.9583333333333334,
+            "f1": 0.9387755102040817,
+            "support": 24
+          }
+        }
+      },
+      "source_test_by_domain": {
+        "Domain_A_Trajectory": {
+          "accuracy": 0.925,
+          "macro_precision": 0.9377777777777778,
+          "macro_recall": 0.925,
+          "macro_f1": 0.9198592257415787,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            }
+          }
+        },
+        "Domain_B_Trajectory": {
+          "accuracy": 0.925,
+          "macro_precision": 0.9242063492063493,
+          "macro_recall": 0.925,
+          "macro_f1": 0.923235294117647,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.875,
+              "recall": 0.875,
+              "f1": 0.875,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 0.8571428571428571,
+              "recall": 0.75,
+              "f1": 0.7999999999999999,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          }
+        },
+        "Domain_C_Trajectory": {
+          "accuracy": 0.975,
+          "macro_precision": 0.9777777777777779,
+          "macro_recall": 0.975,
+          "macro_f1": 0.9749019607843138,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            }
+          }
+        }
+      },
+      "main_head": {
+        "n": 152,
+        "accuracy": 0.4868421052631579,
+        "macro_precision": 0.5964250630844135,
+        "macro_recall": 0.5041666666666667,
+        "macro_f1": 0.49164946164946166,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.4117647058823529,
+            "recall": 0.4375,
+            "f1": 0.42424242424242425,
+            "support": 32,
+            "correct": 14
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.9545454545454546,
+            "recall": 0.65625,
+            "f1": 0.7777777777777778,
+            "support": 32,
+            "correct": 21
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.29850746268656714,
+            "recall": 0.8333333333333334,
+            "f1": 0.4395604395604395,
+            "support": 24,
+            "correct": 20
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.6923076923076923,
+            "recall": 0.28125,
+            "f1": 0.4,
+            "support": 32,
+            "correct": 9
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.625,
+            "recall": 0.3125,
+            "f1": 0.4166666666666667,
+            "support": 32,
+            "correct": 10
+          }
+        ],
+        "confusion_matrix": [
+          [
+            14,
+            1,
+            16,
+            1,
+            0
+          ],
+          [
+            0,
+            21,
+            11,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            20,
+            3,
+            0
+          ],
+          [
+            9,
+            0,
+            8,
+            9,
+            6
+          ],
+          [
+            10,
+            0,
+            12,
+            0,
+            10
+          ]
+        ]
+      },
+      "residual_head_diagnostic": {
+        "n": 152,
+        "accuracy": 0.4407894736842105,
+        "macro_precision": 0.39989097809211666,
+        "macro_recall": 0.4354166666666666,
+        "macro_f1": 0.4071416377734412,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.4,
+            "recall": 0.4375,
+            "f1": 0.41791044776119407,
+            "support": 32,
+            "correct": 14
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.7272727272727273,
+            "recall": 1.0,
+            "f1": 0.8421052631578948,
+            "support": 32,
+            "correct": 32
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.25806451612903225,
+            "recall": 0.3333333333333333,
+            "f1": 0.29090909090909095,
+            "support": 24,
+            "correct": 8
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.32,
+            "recall": 0.25,
+            "f1": 0.2807017543859649,
+            "support": 32,
+            "correct": 8
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.29411764705882354,
+            "recall": 0.15625,
+            "f1": 0.20408163265306123,
+            "support": 32,
+            "correct": 5
+          }
+        ],
+        "confusion_matrix": [
+          [
+            14,
+            4,
+            6,
+            3,
+            5
+          ],
+          [
+            0,
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            6,
+            2,
+            8,
+            6,
+            2
+          ],
+          [
+            7,
+            2,
+            10,
+            8,
+            5
+          ],
+          [
+            8,
+            4,
+            7,
+            8,
+            5
+          ]
+        ]
+      },
+      "locked_training_config": {
+        "seed": 62,
+        "architecture": "tasn",
+        "epochs": 50,
+        "steps_per_epoch": 10,
+        "batch_size": 60,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "label_smoothing": 0.0,
+        "domain_objective": "groupdro",
+        "groupdro_step_size": 0.01,
+        "vrex_weight": 1.0,
+        "trial_consistency_weight": 0.0,
+        "windows_per_trial": 2,
+        "teacher_checkpoint": null,
+        "student_init_checkpoint": null,
+        "student_physics_residual": true,
+        "student_physics_residual_sequence": true,
+        "student_order_spectrum": false,
+        "student_rv_band_attention": true,
+        "student_rv_spectral_contrast": false,
+        "student_rv_spectral_safe_residual": true,
+        "rv_spectral_max_scale": 0.1,
+        "rv_spectral_drop_prob": 0.25,
+        "residual_aux_weight": 1.0,
+        "residual_selection_weight": 0.1,
+        "distill_weight": 1.0,
+        "relation_weight": 0.0,
+        "distill_temperature": 2.0,
+        "teacher_confidence_threshold": 0.4,
+        "distill_ramp_fraction": 0.2,
+        "prototype_weight": 0.0,
+        "prototype_align_weight": 0.0,
+        "contrastive_weight": 0.0,
+        "motion_decoupling_weight": 0.0,
+        "prototype_temperature": 0.1,
+        "contrastive_temperature": 0.1,
+        "dg_ramp_fraction": 0.2,
+        "validate_every": 5,
+        "patience_validations": 0,
+        "held_out_domain": null,
+        "source_pool": [
+          "A",
+          "B",
+          "C"
+        ],
+        "physics_config": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/physics_config.json"
+      },
+      "student_parameter_count": 501480
+    },
+    "72": {
+      "checkpoint": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/checkpoints/tasn_erm_ABC_seed72_ep50_spe10_priorv3_v8_res1_resseq1_ordspec0_rvband1_rvsafe1_cap0p1_drop0p25_lr0p001_init0_groupdro0p01_ra1.pth",
+      "checkpoint_sha256": "35e565029f914ccfa7bbb641a0042339b6115dc95bcfae1f7fa928e2500880d5",
+      "best_source_validation_epoch": 40,
+      "source_test": {
+        "accuracy": 0.9166666666666666,
+        "macro_precision": 0.924873015873016,
+        "macro_recall": 0.9166666666666666,
+        "macro_f1": 0.9122724474405146,
+        "num_windows": 120,
+        "per_class": {
+          "Wear": {
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1": 0.9411764705882353,
+            "support": 24
+          },
+          "Crack": {
+            "precision": 0.9583333333333334,
+            "recall": 0.9583333333333334,
+            "f1": 0.9583333333333334,
+            "support": 24
+          },
+          "Broken": {
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8,
+            "support": 24
+          },
+          "Normal": {
+            "precision": 0.8571428571428571,
+            "recall": 1.0,
+            "f1": 0.923076923076923,
+            "support": 24
+          },
+          "Pitting": {
+            "precision": 0.92,
+            "recall": 0.9583333333333334,
+            "f1": 0.9387755102040817,
+            "support": 24
+          }
+        }
+      },
+      "source_test_by_domain": {
+        "Domain_A_Trajectory": {
+          "accuracy": 0.9,
+          "macro_precision": 0.9155555555555555,
+          "macro_recall": 0.9,
+          "macro_f1": 0.8947611865258924,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            }
+          }
+        },
+        "Domain_B_Trajectory": {
+          "accuracy": 0.875,
+          "macro_precision": 0.9054545454545455,
+          "macro_recall": 0.875,
+          "macro_f1": 0.8552897395002658,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.375,
+              "f1": 0.5454545454545454,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.7272727272727273,
+              "recall": 1.0,
+              "f1": 0.8421052631578948,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            }
+          }
+        },
+        "Domain_C_Trajectory": {
+          "accuracy": 0.975,
+          "macro_precision": 0.9777777777777779,
+          "macro_recall": 0.975,
+          "macro_f1": 0.9749019607843138,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            }
+          }
+        }
+      },
+      "main_head": {
+        "n": 152,
+        "accuracy": 0.5855263157894737,
+        "macro_precision": 0.6594676494676495,
+        "macro_recall": 0.5958333333333333,
+        "macro_f1": 0.5858481128953488,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.4594594594594595,
+            "recall": 0.53125,
+            "f1": 0.4927536231884059,
+            "support": 32,
+            "correct": 17
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 1.0,
+            "recall": 0.8125,
+            "f1": 0.896551724137931,
+            "support": 32,
+            "correct": 26
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.34545454545454546,
+            "recall": 0.7916666666666666,
+            "f1": 0.4810126582278481,
+            "support": 24,
+            "correct": 19
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.5833333333333334,
+            "recall": 0.21875,
+            "f1": 0.31818181818181823,
+            "support": 32,
+            "correct": 7
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.9090909090909091,
+            "recall": 0.625,
+            "f1": 0.7407407407407406,
+            "support": 32,
+            "correct": 20
+          }
+        ],
+        "confusion_matrix": [
+          [
+            17,
+            0,
+            13,
+            1,
+            1
+          ],
+          [
+            1,
+            26,
+            5,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            19,
+            4,
+            0
+          ],
+          [
+            14,
+            0,
+            10,
+            7,
+            1
+          ],
+          [
+            4,
+            0,
+            8,
+            0,
+            20
+          ]
+        ]
+      },
+      "residual_head_diagnostic": {
+        "n": 152,
+        "accuracy": 0.4342105263157895,
+        "macro_precision": 0.43807595912859065,
+        "macro_recall": 0.4375,
+        "macro_f1": 0.41193899782135074,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.42857142857142855,
+            "recall": 0.375,
+            "f1": 0.39999999999999997,
+            "support": 32,
+            "correct": 12
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.8888888888888888,
+            "recall": 1.0,
+            "f1": 0.9411764705882353,
+            "support": 32,
+            "correct": 32
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.21052631578947367,
+            "recall": 0.5,
+            "f1": 0.2962962962962963,
+            "support": 24,
+            "correct": 12
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.38461538461538464,
+            "recall": 0.15625,
+            "f1": 0.22222222222222224,
+            "support": 32,
+            "correct": 5
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.2777777777777778,
+            "recall": 0.15625,
+            "f1": 0.19999999999999998,
+            "support": 32,
+            "correct": 5
+          }
+        ],
+        "confusion_matrix": [
+          [
+            12,
+            3,
+            15,
+            0,
+            2
+          ],
+          [
+            0,
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            4,
+            1,
+            12,
+            2,
+            5
+          ],
+          [
+            5,
+            0,
+            16,
+            5,
+            6
+          ],
+          [
+            7,
+            0,
+            14,
+            6,
+            5
+          ]
+        ]
+      },
+      "locked_training_config": {
+        "seed": 72,
+        "architecture": "tasn",
+        "epochs": 50,
+        "steps_per_epoch": 10,
+        "batch_size": 60,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "label_smoothing": 0.0,
+        "domain_objective": "groupdro",
+        "groupdro_step_size": 0.01,
+        "vrex_weight": 1.0,
+        "trial_consistency_weight": 0.0,
+        "windows_per_trial": 2,
+        "teacher_checkpoint": null,
+        "student_init_checkpoint": null,
+        "student_physics_residual": true,
+        "student_physics_residual_sequence": true,
+        "student_order_spectrum": false,
+        "student_rv_band_attention": true,
+        "student_rv_spectral_contrast": false,
+        "student_rv_spectral_safe_residual": true,
+        "rv_spectral_max_scale": 0.1,
+        "rv_spectral_drop_prob": 0.25,
+        "residual_aux_weight": 1.0,
+        "residual_selection_weight": 0.1,
+        "distill_weight": 1.0,
+        "relation_weight": 0.0,
+        "distill_temperature": 2.0,
+        "teacher_confidence_threshold": 0.4,
+        "distill_ramp_fraction": 0.2,
+        "prototype_weight": 0.0,
+        "prototype_align_weight": 0.0,
+        "contrastive_weight": 0.0,
+        "motion_decoupling_weight": 0.0,
+        "prototype_temperature": 0.1,
+        "contrastive_temperature": 0.1,
+        "dg_ramp_fraction": 0.2,
+        "validate_every": 5,
+        "patience_validations": 0,
+        "held_out_domain": null,
+        "source_pool": [
+          "A",
+          "B",
+          "C"
+        ],
+        "physics_config": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/physics_config.json"
+      },
+      "student_parameter_count": 501480
+    },
+    "82": {
+      "checkpoint": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/checkpoints/tasn_erm_ABC_seed82_ep50_spe10_priorv3_v8_res1_resseq1_ordspec0_rvband1_rvsafe1_cap0p1_drop0p25_lr0p001_init0_groupdro0p01_ra1.pth",
+      "checkpoint_sha256": "1a00d66d97357228650c07c46c236e59b32d3085604161e7bb0345e766bb1e17",
+      "best_source_validation_epoch": 25,
+      "source_test": {
+        "accuracy": 0.925,
+        "macro_precision": 0.932043956043956,
+        "macro_recall": 0.925,
+        "macro_f1": 0.9233804736297136,
+        "num_windows": 120,
+        "per_class": {
+          "Wear": {
+            "precision": 0.8571428571428571,
+            "recall": 1.0,
+            "f1": 0.923076923076923,
+            "support": 24
+          },
+          "Crack": {
+            "precision": 1.0,
+            "recall": 0.9583333333333334,
+            "f1": 0.9787234042553191,
+            "support": 24
+          },
+          "Broken": {
+            "precision": 1.0,
+            "recall": 0.75,
+            "f1": 0.8571428571428571,
+            "support": 24
+          },
+          "Normal": {
+            "precision": 0.9230769230769231,
+            "recall": 1.0,
+            "f1": 0.9600000000000001,
+            "support": 24
+          },
+          "Pitting": {
+            "precision": 0.88,
+            "recall": 0.9166666666666666,
+            "f1": 0.8979591836734694,
+            "support": 24
+          }
+        }
+      },
+      "source_test_by_domain": {
+        "Domain_A_Trajectory": {
+          "accuracy": 0.875,
+          "macro_precision": 0.8933333333333333,
+          "macro_recall": 0.875,
+          "macro_f1": 0.8712317747611864,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.7777777777777778,
+              "recall": 0.875,
+              "f1": 0.823529411764706,
+              "support": 8
+            }
+          }
+        },
+        "Domain_B_Trajectory": {
+          "accuracy": 0.925,
+          "macro_precision": 0.9333333333333332,
+          "macro_recall": 0.925,
+          "macro_f1": 0.9185520361990951,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 0.625,
+              "f1": 0.7692307692307693,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            }
+          }
+        },
+        "Domain_C_Trajectory": {
+          "accuracy": 0.975,
+          "macro_precision": 0.9777777777777779,
+          "macro_recall": 0.975,
+          "macro_f1": 0.9749019607843138,
+          "num_windows": 40,
+          "per_class": {
+            "Wear": {
+              "precision": 0.8888888888888888,
+              "recall": 1.0,
+              "f1": 0.9411764705882353,
+              "support": 8
+            },
+            "Crack": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Broken": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Normal": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "support": 8
+            },
+            "Pitting": {
+              "precision": 1.0,
+              "recall": 0.875,
+              "f1": 0.9333333333333333,
+              "support": 8
+            }
+          }
+        }
+      },
+      "main_head": {
+        "n": 152,
+        "accuracy": 0.5263157894736842,
+        "macro_precision": 0.6437806486399837,
+        "macro_recall": 0.5395833333333333,
+        "macro_f1": 0.5248738765739847,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.3695652173913043,
+            "recall": 0.53125,
+            "f1": 0.4358974358974359,
+            "support": 32,
+            "correct": 17
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.9615384615384616,
+            "recall": 0.78125,
+            "f1": 0.8620689655172413,
+            "support": 32,
+            "correct": 25
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.35185185185185186,
+            "recall": 0.7916666666666666,
+            "f1": 0.48717948717948717,
+            "support": 24,
+            "correct": 19
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.8888888888888888,
+            "recall": 0.25,
+            "f1": 0.3902439024390244,
+            "support": 32,
+            "correct": 8
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.6470588235294118,
+            "recall": 0.34375,
+            "f1": 0.4489795918367347,
+            "support": 32,
+            "correct": 11
+          }
+        ],
+        "confusion_matrix": [
+          [
+            17,
+            0,
+            13,
+            0,
+            2
+          ],
+          [
+            4,
+            25,
+            3,
+            0,
+            0
+          ],
+          [
+            4,
+            0,
+            19,
+            1,
+            0
+          ],
+          [
+            10,
+            1,
+            9,
+            8,
+            4
+          ],
+          [
+            11,
+            0,
+            10,
+            0,
+            11
+          ]
+        ]
+      },
+      "residual_head_diagnostic": {
+        "n": 152,
+        "accuracy": 0.39473684210526316,
+        "macro_precision": 0.31556390977443605,
+        "macro_recall": 0.4020833333333333,
+        "macro_f1": 0.34167497524720364,
+        "per_class": [
+          {
+            "class_id": 0,
+            "class_name": "Wear",
+            "precision": 0.2857142857142857,
+            "recall": 0.375,
+            "f1": 0.3243243243243243,
+            "support": 32,
+            "correct": 12
+          },
+          {
+            "class_id": 1,
+            "class_name": "Crack",
+            "precision": 0.8421052631578947,
+            "recall": 1.0,
+            "f1": 0.9142857142857143,
+            "support": 32,
+            "correct": 32
+          },
+          {
+            "class_id": 2,
+            "class_name": "Broken",
+            "precision": 0.25,
+            "recall": 0.5416666666666666,
+            "f1": 0.34210526315789475,
+            "support": 24,
+            "correct": 13
+          },
+          {
+            "class_id": 3,
+            "class_name": "Normal",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 32,
+            "correct": 0
+          },
+          {
+            "class_id": 4,
+            "class_name": "Pitting",
+            "precision": 0.2,
+            "recall": 0.09375,
+            "f1": 0.12765957446808512,
+            "support": 32,
+            "correct": 3
+          }
+        ],
+        "confusion_matrix": [
+          [
+            12,
+            4,
+            14,
+            0,
+            2
+          ],
+          [
+            0,
+            32,
+            0,
+            0,
+            0
+          ],
+          [
+            5,
+            2,
+            13,
+            1,
+            3
+          ],
+          [
+            13,
+            0,
+            12,
+            0,
+            7
+          ],
+          [
+            12,
+            0,
+            13,
+            4,
+            3
+          ]
+        ]
+      },
+      "locked_training_config": {
+        "seed": 82,
+        "architecture": "tasn",
+        "epochs": 50,
+        "steps_per_epoch": 10,
+        "batch_size": 60,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "label_smoothing": 0.0,
+        "domain_objective": "groupdro",
+        "groupdro_step_size": 0.01,
+        "vrex_weight": 1.0,
+        "trial_consistency_weight": 0.0,
+        "windows_per_trial": 2,
+        "teacher_checkpoint": null,
+        "student_init_checkpoint": null,
+        "student_physics_residual": true,
+        "student_physics_residual_sequence": true,
+        "student_order_spectrum": false,
+        "student_rv_band_attention": true,
+        "student_rv_spectral_contrast": false,
+        "student_rv_spectral_safe_residual": true,
+        "rv_spectral_max_scale": 0.1,
+        "rv_spectral_drop_prob": 0.25,
+        "residual_aux_weight": 1.0,
+        "residual_selection_weight": 0.1,
+        "distill_weight": 1.0,
+        "relation_weight": 0.0,
+        "distill_temperature": 2.0,
+        "teacher_confidence_threshold": 0.4,
+        "distill_ramp_fraction": 0.2,
+        "prototype_weight": 0.0,
+        "prototype_align_weight": 0.0,
+        "contrastive_weight": 0.0,
+        "motion_decoupling_weight": 0.0,
+        "prototype_temperature": 0.1,
+        "contrastive_temperature": 0.1,
+        "dg_ramp_fraction": 0.2,
+        "validate_every": 5,
+        "patience_validations": 0,
+        "held_out_domain": null,
+        "source_pool": [
+          "A",
+          "B",
+          "C"
+        ],
+        "physics_config": "/data1/wangheyao/GAE_EWC_MMD_DuiKangYu/shiyan/physics_config.json"
+      },
+      "student_parameter_count": 501480
+    }
+  },
+  "aggregate_main_head": {
+    "accuracy": {
+      "mean": 0.5013157894736843,
+      "sample_std": 0.05647941060877566,
+      "values": [
+        0.46710526315789475,
+        0.4407894736842105,
+        0.4868421052631579,
+        0.5855263157894737,
+        0.5263157894736842
+      ]
+    },
+    "macro_precision": {
+      "mean": 0.6039108268027992,
+      "sample_std": 0.04905106931332469,
+      "values": [
+        0.582579185520362,
+        0.5373015873015874,
+        0.5964250630844135,
+        0.6594676494676495,
+        0.6437806486399837
+      ]
+    },
+    "macro_recall": {
+      "mean": 0.5166666666666667,
+      "sample_std": 0.05276635475797474,
+      "values": [
+        0.48125,
+        0.4625,
+        0.5041666666666667,
+        0.5958333333333333,
+        0.5395833333333333
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.5002716580070603,
+      "sample_std": 0.05865811659201988,
+      "values": [
+        0.46686147186147187,
+        0.43212536705503457,
+        0.49164946164946166,
+        0.5858481128953488,
+        0.5248738765739847
+      ]
+    },
+    "per_class_mean_and_sample_std": [
+      {
+        "class_id": 0,
+        "class_name": "Wear",
+        "precision_mean": 0.40338663471655795,
+        "precision_sample_std": 0.06790658508382752,
+        "recall_mean": 0.46875,
+        "recall_sample_std": 0.07967217989988726,
+        "f1_mean": 0.4322542759882914,
+        "f1_sample_std": 0.06768471079244578
+      },
+      {
+        "class_id": 1,
+        "class_name": "Crack",
+        "precision_mean": 0.9832167832167832,
+        "precision_sample_std": 0.023113977455997758,
+        "recall_mean": 0.73125,
+        "recall_sample_std": 0.06480137922914914,
+        "f1_mean": 0.8375153837222802,
+        "f1_sample_std": 0.04520340635205448
+      },
+      {
+        "class_id": 2,
+        "class_name": "Broken",
+        "precision_mean": 0.30749610533192623,
+        "precision_sample_std": 0.0419685727041244,
+        "recall_mean": 0.8083333333333333,
+        "recall_sample_std": 0.04750730937913076,
+        "f1_mean": 0.444050516993555,
+        "f1_sample_std": 0.044881376759292685
+      },
+      {
+        "class_id": 3,
+        "class_name": "Normal",
+        "precision_mean": 0.6463675213675214,
+        "precision_sample_std": 0.18751750107039342,
+        "recall_mean": 0.225,
+        "recall_sample_std": 0.07781187248742957,
+        "f1_mean": 0.33168514412416855,
+        "f1_sample_std": 0.10718535190147743
+      },
+      {
+        "class_id": 4,
+        "class_name": "Pitting",
+        "precision_mean": 0.6790870893812071,
+        "precision_sample_std": 0.1501366951401769,
+        "recall_mean": 0.35,
+        "recall_sample_std": 0.1703053324179839,
+        "f1_mean": 0.45585296920700646,
+        "f1_sample_std": 0.18069742772362446
+      }
+    ],
+    "summed_confusion_matrix_across_seeds": [
+      [
+        75,
+        1,
+        78,
+        2,
+        4
+      ],
+      [
+        8,
+        117,
+        35,
+        0,
+        0
+      ],
+      [
+        8,
+        0,
+        97,
+        15,
+        0
+      ],
+      [
+        54,
+        1,
+        50,
+        36,
+        19
+      ],
+      [
+        42,
+        0,
+        60,
+        2,
+        56
+      ]
+    ]
+  },
+  "aggregate_residual_head_diagnostic": {
+    "accuracy": {
+      "mean": 0.40921052631578947,
+      "sample_std": 0.02767853153679293,
+      "values": [
+        0.375,
+        0.40131578947368424,
+        0.4407894736842105,
+        0.4342105263157895,
+        0.39473684210526316
+      ]
+    },
+    "macro_precision": {
+      "mean": 0.37480416948323564,
+      "sample_std": 0.04659683362475426,
+      "values": [
+        0.3525299145299145,
+        0.3679600858911204,
+        0.39989097809211666,
+        0.43807595912859065,
+        0.31556390977443605
+      ]
+    },
+    "macro_recall": {
+      "mean": 0.41208333333333325,
+      "sample_std": 0.024535617534062144,
+      "values": [
+        0.37916666666666665,
+        0.40625,
+        0.4354166666666666,
+        0.4375,
+        0.4020833333333333
+      ]
+    },
+    "macro_f1": {
+      "mean": 0.3719983874285255,
+      "sample_std": 0.035962533380020464,
+      "values": [
+        0.3350982350982351,
+        0.3641380912023967,
+        0.4071416377734412,
+        0.41193899782135074,
+        0.34167497524720364
+      ]
+    },
+    "per_class_mean_and_sample_std": [
+      {
+        "class_id": 0,
+        "class_name": "Wear",
+        "precision_mean": 0.3536157635467981,
+        "precision_sample_std": 0.08501516595056768,
+        "recall_mean": 0.35,
+        "recall_sample_std": 0.09478594305064438,
+        "f1_mean": 0.3492407421651623,
+        "f1_sample_std": 0.08530585699460244
+      },
+      {
+        "class_id": 1,
+        "class_name": "Crack",
+        "precision_mean": 0.7767327409432673,
+        "precision_sample_std": 0.08292269076554042,
+        "recall_mean": 0.9875,
+        "recall_sample_std": 0.02795084971874737,
+        "f1_mean": 0.8679094180022974,
+        "f1_sample_std": 0.05655704625178659
+      },
+      {
+        "class_id": 2,
+        "class_name": "Broken",
+        "precision_mean": 0.23217970484523964,
+        "precision_sample_std": 0.021705448593437336,
+        "recall_mean": 0.4666666666666666,
+        "recall_sample_std": 0.08014743359029727,
+        "f1_mean": 0.30691476165160375,
+        "f1_sample_std": 0.02230614486330627
+      },
+      {
+        "class_id": 3,
+        "class_name": "Normal",
+        "precision_mean": 0.2637802197802198,
+        "precision_sample_std": 0.16458078540132942,
+        "recall_mean": 0.125,
+        "recall_sample_std": 0.09110862335695782,
+        "f1_mean": 0.16476698993861463,
+        "f1_sample_std": 0.10692263295262054
+      },
+      {
+        "class_id": 4,
+        "class_name": "Pitting",
+        "precision_mean": 0.24771241830065355,
+        "precision_sample_std": 0.044636264258729075,
+        "recall_mean": 0.13125,
+        "recall_sample_std": 0.02614562582918986,
+        "f1_mean": 0.1711600253849494,
+        "f1_sample_std": 0.03204891979056385
+      }
+    ],
+    "summed_confusion_matrix_across_seeds": [
+      [
+        56,
+        19,
+        60,
+        4,
+        21
+      ],
+      [
+        2,
+        158,
+        0,
+        0,
+        0
+      ],
+      [
+        24,
+        10,
+        56,
+        15,
+        15
+      ],
+      [
+        41,
+        7,
+        64,
+        20,
+        28
+      ],
+      [
+        36,
+        11,
+        64,
+        28,
+        21
+      ]
+    ]
+  },
+  "fixed_logit_ensemble": {
+    "selection_on_domain_D": false,
+    "definition": "unweighted arithmetic mean of all five fixed-seed logits",
+    "main_head": {
+      "n": 152,
+      "accuracy": 0.5263157894736842,
+      "macro_precision": 0.6237179487179487,
+      "macro_recall": 0.54375,
+      "macro_f1": 0.5160029140359398,
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "Wear",
+          "precision": 0.41025641025641024,
+          "recall": 0.5,
+          "f1": 0.4507042253521127,
+          "support": 32,
+          "correct": 16
+        },
+        {
+          "class_id": 1,
+          "class_name": "Crack",
+          "precision": 1.0,
+          "recall": 0.8125,
+          "f1": 0.896551724137931,
+          "support": 32,
+          "correct": 26
+        },
+        {
+          "class_id": 2,
+          "class_name": "Broken",
+          "precision": 0.3333333333333333,
+          "recall": 0.875,
+          "f1": 0.48275862068965514,
+          "support": 24,
+          "correct": 21
+        },
+        {
+          "class_id": 3,
+          "class_name": "Normal",
+          "precision": 0.625,
+          "recall": 0.15625,
+          "f1": 0.25,
+          "support": 32,
+          "correct": 5
+        },
+        {
+          "class_id": 4,
+          "class_name": "Pitting",
+          "precision": 0.75,
+          "recall": 0.375,
+          "f1": 0.5,
+          "support": 32,
+          "correct": 12
+        }
+      ],
+      "confusion_matrix": [
+        [
+          16,
+          0,
+          15,
+          1,
+          0
+        ],
+        [
+          0,
+          26,
+          6,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          21,
+          2,
+          0
+        ],
+        [
+          12,
+          0,
+          11,
+          5,
+          4
+        ],
+        [
+          10,
+          0,
+          10,
+          0,
+          12
+        ]
+      ]
+    },
+    "residual_head_diagnostic": {
+      "n": 152,
+      "accuracy": 0.45394736842105265,
+      "macro_precision": 0.47837158324963197,
+      "macro_recall": 0.4583333333333333,
+      "macro_f1": 0.42500257308795064,
+      "per_class": [
+        {
+          "class_id": 0,
+          "class_name": "Wear",
+          "precision": 0.36363636363636365,
+          "recall": 0.375,
+          "f1": 0.3692307692307692,
+          "support": 32,
+          "correct": 12
+        },
+        {
+          "class_id": 1,
+          "class_name": "Crack",
+          "precision": 0.7804878048780488,
+          "recall": 1.0,
+          "f1": 0.8767123287671234,
+          "support": 32,
+          "correct": 32
+        },
+        {
+          "class_id": 2,
+          "class_name": "Broken",
+          "precision": 0.24074074074074073,
+          "recall": 0.5416666666666666,
+          "f1": 0.33333333333333337,
+          "support": 24,
+          "correct": 13
+        },
+        {
+          "class_id": 3,
+          "class_name": "Normal",
+          "precision": 0.5454545454545454,
+          "recall": 0.1875,
+          "f1": 0.27906976744186046,
+          "support": 32,
+          "correct": 6
+        },
+        {
+          "class_id": 4,
+          "class_name": "Pitting",
+          "precision": 0.46153846153846156,
+          "recall": 0.1875,
+          "f1": 0.26666666666666666,
+          "support": 32,
+          "correct": 6
+        }
+      ],
+      "confusion_matrix": [
+        [
+          12,
+          4,
+          16,
+          0,
+          0
+        ],
+        [
+          0,
+          32,
+          0,
+          0,
+          0
+        ],
+        [
+          5,
+          2,
+          13,
+          1,
+          3
+        ],
+        [
+          10,
+          1,
+          11,
+          6,
+          4
+        ],
+        [
+          6,
+          2,
+          14,
+          4,
+          6
+        ]
+      ]
+    }
+  }
+}

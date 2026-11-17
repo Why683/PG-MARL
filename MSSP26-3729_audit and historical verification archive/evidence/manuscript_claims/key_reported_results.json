@@ -1,0 +1,51 @@
+{
+  "source_macro_f1_mean_sd": {
+    "A": [
+      0.981,
+      0.006
+    ],
+    "B": [
+      0.896,
+      0.033
+    ],
+    "C": [
+      0.981,
+      0.006
+    ]
+  },
+  "target_macro_f1_mean_sd": {
+    "D": [
+      0.722,
+      0.14
+    ],
+    "E": [
+      0.703,
+      0.08
+    ]
+  },
+  "target_trial_run_bootstrap_95": {
+    "D": [
+      0.613,
+      0.829
+    ],
+    "E": [
+      0.618,
+      0.785
+    ]
+  },
+  "direct_fusion_macro_f1_mean_sd": {
+    "D": [
+      0.652,
+      0.123
+    ],
+    "E": [
+      0.637,
+      0.115
+    ]
+  },
+  "normal_false_alarm_percent": {
+    "D": 6.97,
+    "E": 25.48
+  },
+  "warning": "Transcribed from the 11.16 manuscript; not regenerated from the local snapshot."
+}
